@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "/Users/pnair/Projects/angApp/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
