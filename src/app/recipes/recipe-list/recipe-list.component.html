@@ -1,1 +1,33 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+        <div class="col-xs-6">
+           <button class="btn btn-success">New Recipe</button>
+        </div>
+
+        <div class="card" style="width: 10rem;" *ngFor="let rcp of recipes"> 
+                <img class="card-img-top" [src]="rcp.imagePath" alt="rcp.name">
+                <div class="card-body">
+                  <h5 class="card-title"> {{rcp.name}} </h5>
+                  <p class="card-text"> {{rcp.description}} </p>
+                </div>
+              </div>
+
+        <!-- <div class="row">
+           <div class="col-xs-12">
+              <a 
+                href="#" 
+                class="list-group-item clearfix" 
+                *ngFor="let rcp of recipes">
+                 <div class="pull-left">
+                    <h4 class="list-group-item list-group-item-primary"> {{rcp.name}} </h4>
+                    <p class="list-group-item list-group-item-light"> {{rcp.description}} </p>
+                 </div>
+                 <span class="pull-right">
+                 <img [src]="rcp.imagePath" 
+                 alt="" 
+                 class="image-responsive" style="max-height: 50px">
+                 </span>
+              </a>
+           </div>
+        </div> -->
+        <app-recipe-item></app-recipe-item>
+</div>
