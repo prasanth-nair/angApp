@@ -23,4 +23,7 @@
     <!-- </a> -->
     </div>
      <hr>
-     <app-recipe-item></app-recipe-item>
+     <app-recipe-item 
+        [recipeItem] = "selectedRecipe"
+        (onClick) = "handleClick($event)"
+     > </app-recipe-item>

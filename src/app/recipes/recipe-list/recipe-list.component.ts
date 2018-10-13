@@ -14,9 +14,14 @@ export class RecipeListComponent implements OnInit {
     'https://cb-web-assets.imgix.net/getmagicbullet/img/recipe-red-pepper-deviled-eggs.jpg')
   ];
 
-  constructor() {
-    console.log('inside constructor');
-    console.log(this.recipes);
+  selectedRecipe: Recipe = this.recipes[0];
+  
+
+  constructor() { }
+
+   handleClick(parmStr) {
+     console.log('inside handle click');
+     this.recipes[0].description = parmStr;
    }
 
   ngOnInit() {
