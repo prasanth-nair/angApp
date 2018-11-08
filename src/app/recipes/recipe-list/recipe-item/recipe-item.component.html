@@ -1,7 +1,17 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-sm-12">
     <h6 (click)="onClick.emit(emitValue())"> 
       <span class="alert alert-success"> {{recipeItem.name}} </span>
     </h6>
+  </div>
+</div> -->
+
+<div class="row " *ngFor="let rcp of recipeItems">
+  <div class="col-sm-10">
+    <h5> {{rcp.name}} </h5>
+    <p> {{rcp.description}} </p>
+  </div>
+  <div class="col-sm-2">
+    <img class="float-right img-thumbnail" [src]="rcp.imagePath" alt="rcp.name">
   </div>
 </div>

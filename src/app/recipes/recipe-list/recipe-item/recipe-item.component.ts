@@ -8,15 +8,8 @@ import { Recipe } from 'src/app/model/recipe-model';
 })
 export class RecipeItemComponent implements OnInit {
   debug;
-  @Input() recipeItem : Recipe;
+  @Input() recipeItems: Recipe[];
 
-  @Output()  onClick = new EventEmitter<string>(); 
-  
-  emitValue() {
-    return ('Hello There.. I see you...');
-  }
-
-  
   constructor() { }
 
   ngOnInit() {

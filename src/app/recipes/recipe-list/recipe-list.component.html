@@ -11,16 +11,6 @@
                </div>
         </div>
         </div> -->
-<div class="row " *ngFor="let rcp of recipes">
-    <!-- <a href="#"> -->
-    <div class="col-sm-10">
-        <h5> {{rcp.name}} </h5>
-        <p> {{rcp.description}} </p>
-    </div>
-    <div class="col-sm-2">
-        <img class="float-right img-thumbnail" [src]="rcp.imagePath" alt="rcp.name">
-    </div>
-    <!-- </a> -->
-</div>
-<hr>
-<app-recipe-item [recipeItem]="selectedRecipe" (onClick)="handleClick($event)"> </app-recipe-item>
+
+
+<app-recipe-item [recipeItems]="recipes"> </app-recipe-item>
