@@ -1,8 +1,8 @@
 <div class="col-xs-6">
-        <button class="btn btn-success">New Recipe</button>
-     </div>
-     <hr>
-     <!-- <div class="row" *ngFor="let rcp of recipes">
+    <button class="btn btn-success">New Recipe</button>
+</div>
+<hr>
+<!-- <div class="row" *ngFor="let rcp of recipes">
         <div class="card" style="width: 10rem;" >
                <img class="card-img-top" [src]="rcp.imagePath" alt="rcp.name" >
                <div class="card-body">
@@ -11,19 +11,16 @@
                </div>
         </div>
         </div> -->
-     <div class="row " *ngFor="let rcp of recipes">
-        <!-- <a href="#"> -->
-        <div class="col-sm-10"  >
-           <h5  > {{rcp.name}} </h5>
-           <p > {{rcp.description}} </p>
-        </div>
-        <div class="col-sm-2"  >
-           <img class="float-right img-thumbnail"   [src]="rcp.imagePath" alt="rcp.name" >
-        </div>
-    <!-- </a> -->
+<div class="row " *ngFor="let rcp of recipes">
+    <!-- <a href="#"> -->
+    <div class="col-sm-10">
+        <h5> {{rcp.name}} </h5>
+        <p> {{rcp.description}} </p>
     </div>
-     <hr>
-     <app-recipe-item 
-        [recipeItem] = "selectedRecipe"
-        (onClick) = "handleClick($event)"
-     > </app-recipe-item>
+    <div class="col-sm-2">
+        <img class="float-right img-thumbnail" [src]="rcp.imagePath" alt="rcp.name">
+    </div>
+    <!-- </a> -->
+</div>
+<hr>
+<app-recipe-item [recipeItem]="selectedRecipe" (onClick)="handleClick($event)"> </app-recipe-item>

@@ -8,13 +8,13 @@ import { Ingredients } from '../model/ingredients.model';
 })
 export class ShoppingListComponent implements OnInit {
 
-   ingredients: Ingredients[] =
-   [
+  ingredients: Ingredients[] =
+    [
       new Ingredients('Apple', 3),
       new Ingredients('Orange', 2),
       new Ingredients('Banana', 5),
 
-   ];
+    ];
 
 
   constructor() { }
