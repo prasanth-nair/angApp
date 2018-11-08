@@ -1,13 +1,3 @@
-<!-- Title Image Row -->
-<div class="row">
-  <div class="col-xs-12">
-    <img src="" alt="" class="image-respoinsive">
-  </div>
-
-  <div class="col-sm-12">
-    <h1>Recipe Name</h1> 
-  </div>
-</div>
 <!-- Manage Button Row -->
 <div class="row">
   <div class="col-xs-12">
@@ -16,28 +6,38 @@
         Manage
         <span class="caret"></span>
       </button>
-       <ul class="dropdown-menu">
-         <li>
-           <a href="#">Add Recipe</a>
-           <a href="#">Edit Recipe</a>
-           <a href="#">Delete Recipe</a>
-         </li>
-       </ul>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="#">Add Recipe</a>
+          <a href="#">Edit Recipe</a>
+          <a href="#">Delete Recipe</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</div>
+
+<!-- Title Image Row -->
+<div class="row">
+  <div class="col-xs-12">
+    <img src="" alt="" class="image-respoinsive">
+  </div>
+
+  <div class="col-sm-12">
+    <h6> {{passedRecipe.name}} </h6>
+  </div>
+</div>
+
+<!-- Recipe picture Row -->
+<div class="row">
+  <div class="col-md-12">
+    <img src="{{passedRecipe.imagePath}}" style="height:100px">
   </div>
 </div>
 
 <!-- Recipe Description Row -->
 <div class="row">
   <div class="col-md-12">
-    Description
+    <p>{{passedRecipe.description}}</p>
   </div>
 </div>
-
-<!-- Recipe Ingrediants Row -->
-<div class="row">
-   <div class="col-md-12">
-     Ingredients
-   </div>
-</div>
-

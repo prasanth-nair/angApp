@@ -13,4 +13,6 @@
         </div> -->
 
 
-<app-recipe-item [recipeItems]="recipes"> </app-recipe-item>
+<app-recipe-item [recipeItems]="recipes" (SelectedItem)="handleSelectedItem($event)">
+
+</app-recipe-item>

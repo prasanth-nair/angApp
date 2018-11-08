@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../../model/recipe-model';
 @Component({
   selector: 'app-recipe-list',
@@ -14,14 +14,19 @@ export class RecipeListComponent implements OnInit {
       'https://cb-web-assets.imgix.net/getmagicbullet/img/recipe-red-pepper-deviled-eggs.jpg')
   ];
 
-
+  selectedItem: Recipe;
+  @Output() selectedItemFromChild = new EventEmitter<Recipe>();
 
   constructor() { }
 
-  handleClick(parmStr) {
-    console.log('inside handle click');
-    this.recipes[0].description = parmStr;
+  handleSelectedItem(rcp: Recipe) {
+    this.selectedItemFromChild.emit(rcp);
   }
+
+  // handleClick(parmStr) {
+  //   console.log('inside recipe list');
+  //   this.recipes[0].description = parmStr;
+  // }
 
   ngOnInit() {
   }
