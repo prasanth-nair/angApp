@@ -2,17 +2,8 @@
     <button class="btn btn-success">New Recipe</button>
 </div>
 <hr>
-<!-- <div class="row" *ngFor="let rcp of recipes">
-        <div class="card" style="width: 10rem;" >
-               <img class="card-img-top" [src]="rcp.imagePath" alt="rcp.name" >
-               <div class="card-body">
-                  <h5 class="card-title" > {{rcp.name}} </h5>
-                  <p class="card-text"> {{rcp.description}} </p>
-               </div>
-        </div>
-        </div> -->
 
 
-<app-recipe-item [recipeItems]="recipes" (SelectedItem)="handleSelectedItem($event)">
+<app-recipe-item [recipeItems]="recipes">
 
 </app-recipe-item>

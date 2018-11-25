@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from 'src/app/model/recipe-model';
-import { SelectorContext } from '@angular/compiler';
+import { RecipeService } from '../../recipe.service';
+
 
 @Component({
   selector: 'app-recipe-item',
@@ -10,13 +11,14 @@ import { SelectorContext } from '@angular/compiler';
 export class RecipeItemComponent implements OnInit {
   debug;
   @Input() recipeItems: Recipe[];
-  @Output() SelectedItem = new EventEmitter<Recipe>();
 
-  constructor() { }
+  constructor(private _recipeService: RecipeService) { }
 
-  clickHandle(rcp: Recipe) {
-    console.log("insite click handle");
-    this.SelectedItem.emit(rcp);
+  onSelected(rcp: Recipe) {
+    console.log("inside click handle " + JSON.stringify(rcp));
+    //calling the event emitter from within the service, and passing 
+    // the parameter
+    this._recipeService.recipeSelected.emit(rcp);
   }
   ngOnInit() {
   }

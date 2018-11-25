@@ -11,11 +11,17 @@
           <input type="number" id="amount" class="form-control" #ingAmount>
         </div>
       </div>
+      <div class="row" *ngIf="errorFlag">
+        <div class="alert alert-danger" role="alert">
+          Please enter the item and the quantity!
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-sm-12">
           <button class="btn btn-outline-success" style="margin:10px" type="button" (click)="addIngredient()"> Add</button>
           <button class="btn btn-outline-danger" style="margin:10px" type="button"> Delete </button>
-          <button class="btn btn-outline-primary" style="margin:10px" type="reset"> Clear</button>
+          <button class="btn btn-outline-primary" style="margin:10px" type="button" (click)="clrIng()"> Clear</button>
         </div>
       </div>
     </form>

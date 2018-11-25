@@ -7,7 +7,7 @@
 </div> -->
 
 <div class="row " *ngFor="let rcp of recipeItems">
-  <div class="col-sm-10" (click)="clickHandle(rcp)">
+  <div class="col-sm-10" (click)="onSelected(rcp)">
     <h5> {{rcp.name}} </h5>
     <p> {{rcp.description}} </p>
   </div>
