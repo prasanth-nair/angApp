@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { DropdownBasicDirective } from './shared/dropdown-basic.directive';
+import { AppRoutingModule } from './app-routing-module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,9 +31,17 @@ import { DropdownBasicDirective } from './shared/dropdown-basic.directive';
     DropdownBasicDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+
+export class AppModule {
+
+
+
+}
