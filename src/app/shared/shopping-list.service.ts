@@ -25,10 +25,12 @@ export class ShoppingListService {
   }
 
   clearIngredients() {
-    console.log('inside clear ing within service');
     this.ingredients.length = 0;
   }
 
+  addToSList(ing: Ingredients[]) {
+    this.ingredients.push(...ing);
+  }
 
   constructor() { }
 }

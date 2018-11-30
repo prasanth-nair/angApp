@@ -23,19 +23,52 @@
   </div>
 </div>
 
+
+<!-- Recipe Ingredients Row -->
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let ing of passedRecipe.ingredients">
+    {{ing.name}} -- {{ing.amount}}
+  </li>
+</ul>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <p>{{passedRecipe.Ingredients}}</p>
+  </div>
+</div>
+
+
+
+
 <!-- Manage Button Row -->
 <div class="row">
-  <div class="col-xs-12">
+  <!-- <div class="col-xs-12">
     <div class="btn-group">
       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         Manage
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu appDropdown ">
+      <ul class="dropdown-menu appDropdown  show">
         <li> <a href="#">Add Recipe</a> </li>
         <li><a href="#">Edit Recipe</a></li>
         <li> <a href="#">Delete Recipe</a> </li>
       </ul>
     </div>
+  </div> -->
+
+
+  <div class="col">
+    <div ngbDropdown class="d-inline-block ">
+      <button class="btn btn-outline-primary " id="dropdownBasic1" ngbDropdownToggle>Manage</button>
+      <div ngbDropdownMenu>
+        <button class="dropdown-item " (click)="addToSl()">Add to Shopping List</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
   </div>
+
+
 </div>

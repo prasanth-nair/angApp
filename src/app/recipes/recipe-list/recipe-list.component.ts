@@ -19,10 +19,6 @@ export class RecipeListComponent implements OnInit {
 
 
 
-  // handleClick(parmStr) {
-  //   console.log('inside recipe list');
-  //   this.recipes[0].description = parmStr;
-  // }
 
   ngOnInit() {
     this.recipes = this._recipeService.getRecipe();

@@ -15,7 +15,6 @@ export class RecipeItemComponent implements OnInit {
   constructor(private _recipeService: RecipeService) { }
 
   onSelected(rcp: Recipe) {
-    console.log("inside click handle " + JSON.stringify(rcp));
     //calling the event emitter from within the service, and passing 
     // the parameter
     this._recipeService.recipeSelected.emit(rcp);

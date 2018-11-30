@@ -33,7 +33,6 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   clrIng() {
-    console.log('inside ++')
     this._slService.clearIngredients();
   }
 
