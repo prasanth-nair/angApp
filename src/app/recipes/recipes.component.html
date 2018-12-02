@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-sm-5">
     <app-recipe-list (selectedItemFromChild)="innerSelectedRecipe  = $event"></app-recipe-list>
   </div>
 
 
-  <div class="col-md-1"></div>
-  <div class="col-md-6">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-5">
     <router-outlet></router-outlet>
     <!-- <app-recipe-detail *ngIf="innerSelectedRecipe; else infoText" [passedRecipe]="innerSelectedRecipe"></app-recipe-detail>
     <ng-template #infoText>

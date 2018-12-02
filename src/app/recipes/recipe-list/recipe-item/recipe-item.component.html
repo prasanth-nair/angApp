@@ -1,11 +1,11 @@
 <div class="row">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let rcp of recipeItems; let i = index" routerLinkActive="active">
+  <ul class="list-group ">
+    <li class="list-group-item clearfix" *ngFor="let rcp of recipeItems; let i = index" routerLinkActive="active">
       <a [routerLink]="i">
-        <img [src]="rcp.imagePath" alt="Generic placeholder image" style="width: 50px" class="rounded float-left">
+        <img [src]="rcp.imagePath" alt="Generic placeholder image" style="width: 50px" class="rounded float-right">
         <div style="color: black">
 
-          <h6>{{rcp.name}}</h6>
+          <h6 class='font-weight-bold'>{{rcp.name}}</h6>
           {{rcp.description}}
         </div>
       </a>
