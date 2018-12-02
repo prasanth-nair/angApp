@@ -1,17 +1,14 @@
-<!-- <div class="row">
-  <div class="col-sm-12">
-    <h6 (click)="onClick.emit(emitValue())"> 
-      <span class="alert alert-success"> {{recipeItem.name}} </span>
-    </h6>
-  </div>
-</div> -->
+<div class="row">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let rcp of recipeItems; let i = index" routerLinkActive="active">
+      <a [routerLink]="i">
+        <img [src]="rcp.imagePath" alt="Generic placeholder image" style="width: 50px" class="rounded float-left">
+        <div style="color: black">
 
-<div class="row " *ngFor="let rcp of recipeItems">
-  <div class="col-sm-10" (click)="onSelected(rcp)">
-    <h5> {{rcp.name}} </h5>
-    <p> {{rcp.description}} </p>
-  </div>
-  <div class="col-sm-2">
-    <img class="float-right img-thumbnail" [src]="rcp.imagePath" alt="rcp.name">
-  </div>
+          <h6>{{rcp.name}}</h6>
+          {{rcp.description}}
+        </div>
+      </a>
+    </li>
+  </ul>
 </div>

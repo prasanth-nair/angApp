@@ -6,9 +6,10 @@
 
   <div class="col-md-1"></div>
   <div class="col-md-6">
-    <app-recipe-detail *ngIf="innerSelectedRecipe; else infoText" [passedRecipe]="innerSelectedRecipe"></app-recipe-detail>
+    <router-outlet></router-outlet>
+    <!-- <app-recipe-detail *ngIf="innerSelectedRecipe; else infoText" [passedRecipe]="innerSelectedRecipe"></app-recipe-detail>
     <ng-template #infoText>
       <p>Please select a recipe</p>
-    </ng-template>
+    </ng-template> -->
   </div>
 </div>
