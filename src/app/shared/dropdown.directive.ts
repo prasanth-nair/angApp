@@ -1,17 +1,24 @@
-import { Directive, HostListener, HostBinding } from '@angular/core';
+import { Directive, HostBinding, HostListener } from '@angular/core';
+import { isObject } from 'util';
 
 @Directive({
-  selector: '[appDropdown1]'
+  selector: '[appDropdown]'
 })
 export class DropdownDirective {
 
-  @HostBinding('class.show') isOpen = false;
+  // isOpen: boolean = false;
 
-  @HostListener('click') toggleOpen() {
-    this.isOpen = !this.isOpen;
+  @HostBinding('class.show') isOpen = true;
+
+  @HostListener('mouseover') toggleMenu() {
+    console.log('inside the directive')
+    this.isOpen = true;
   }
 
 
-  constructor() { }
+  constructor() {
+    console.log('inside the directive')
+
+  }
 
 }
