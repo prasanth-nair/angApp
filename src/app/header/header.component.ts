@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DropdownDirective } from '../shared/dropdown.directive';
+import { RecipeDbService } from '../shared/recipe-db.service';
 
 
 @Component({
@@ -11,12 +12,21 @@ import { DropdownDirective } from '../shared/dropdown.directive';
 export class HeaderComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private db: RecipeDbService) { }
 
 
 
 
   ngOnInit() {
+  }
+
+  saveData() {
+    console.log('inside header save data')
+    this.db.saveData()
+      .subscribe(
+        (res: Response) => { console.log(res) }
+      )
+
   }
 
 }

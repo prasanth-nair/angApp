@@ -1,7 +1,8 @@
 import { Recipe } from '../model/recipe-model';
 import { Ingredients } from '../model/ingredients.model';
+import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export class RecipeService {
 
 

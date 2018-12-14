@@ -6,40 +6,22 @@
     <a class="nav-link" routerLink="Shopping" routerLinkActive="active">Shopping List</a>
   </li>
 
-  <li class="nav-item dropdown">
+  <li class="nav-item">
+    <button class="btn btn-link mr-2" (click)="saveData()"> Save List </button>
+  </li>
+
+  <li class="nav-item">
+    <button class="btn btn-link mr-2" (click)="retrieveData()"> Retrieve List </button>
+  </li>
+
+
+  <!-- <li class="nav-item dropdown">
     <p appDropdown class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="" role="button">Dropdown</p>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">>Add Recipe</a>
       <a class="dropdown-item" href="#">>Remove Recipe</a>
       <a class="dropdown-item" href="#">>Edit Recipe</a>
     </div>
-  </li>
+  </li> -->
 
 </ul>
-
-<!-- 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-
-
-      <a class="nav-item nav-link" routerLink="Recipe" routerLinkActive="active">Recipes</a>
-      <a class="nav-item nav-link" routerLink="Shopping" routerLinkActive="active">Shopping List</a>
-
-      <div class="col-sm-8 ">
-        <div class="btn-group">
-          <a class="btn btn-outline-secondary dropdown-toggle " role="button" id="dropdownMenuLink" data-toggle="dropdown">
-            Manage Recipe
-          </a>
-          <div class="dropdown-menu appDropdown ">
-            <a class="dropdown-item">Add Recipe</a>
-            <a class="dropdown-item">Edit Recipe</a>
-            <a class="dropdown-item">Delete Recipe</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</nav> -->
