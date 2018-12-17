@@ -46,10 +46,12 @@ export class RecipeService {
 
     saveRecipe(index: number, recipe: Recipe) {
         this.recipes[index] = recipe;
-        console.log('saving after edit')
-        console.log(JSON.stringify(this.recipes))
         this.recipeSubject.next(this.recipes);
     }
 
+    addRecipe(recipe: Recipe) {
+        this.recipes.push(recipe);
+        this.recipeSubject.next(this.recipes);
+    }
 
 }
