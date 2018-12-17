@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../../model/recipe-model';
 import { RecipeService } from '../../shared/recipe.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 
 
 @Component({
@@ -12,6 +14,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class RecipeListComponent implements OnInit {
 
   selectedItem: Recipe;
+  subscription: Subscription;
 
 
   recipes: Recipe[] = [];
@@ -20,7 +23,14 @@ export class RecipeListComponent implements OnInit {
 
 
   ngOnInit() {
-    this.recipes = this._recipeService.getRecipe();
+    this._recipeService.recipeSubject
+      .subscribe(
+        (rcp: Recipe[]) => {
+          this.recipes = rcp;
+        }
+      )
+    this._recipeService.getRecipe();
+
   }
 
 }

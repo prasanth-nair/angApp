@@ -1,9 +1,12 @@
 import { Recipe } from '../model/recipe-model';
 import { Ingredients } from '../model/ingredients.model';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 
 @Injectable()
 export class RecipeService {
+    recipeSubject = new Subject<Recipe[]>();
 
 
 
@@ -24,13 +27,28 @@ export class RecipeService {
 
 
     ];
+    getRecipe2() {
+        return this.recipes;
+    }
 
     getRecipe() {
-        return this.recipes;
+        this.recipeSubject.next(this.recipes);
     }
 
     getRecipeById(id: number) {
         return this.recipes[id];
+    }
+
+    setRecipeList(recipeList: Recipe[]) {
+        this.recipes = recipeList;
+        this.recipeSubject.next(this.recipes);
+    }
+
+    saveRecipe(index: number, recipe: Recipe) {
+        this.recipes[index] = recipe;
+        console.log('saving after edit')
+        console.log(JSON.stringify(this.recipes))
+        this.recipeSubject.next(this.recipes);
     }
 
 

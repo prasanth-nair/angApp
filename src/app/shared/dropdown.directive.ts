@@ -16,9 +16,6 @@ export class DropdownDirective {
   }
 
 
-  constructor() {
-    console.log('inside the directive')
-
-  }
+  constructor() { }
 
 }

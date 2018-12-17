@@ -37,7 +37,6 @@ export class RecipeEditComponent implements OnInit {
 
     if (this.editMode) {
       this.recipe = this.recipeService.getRecipeById(this.id);
-      // console.log(JSON.stringify(recipe));
       this.recipeForm = new FormGroup({
         'name': new FormControl(this.recipe.name),
         'imagePath': new FormControl(this.recipe.imagePath),
@@ -47,7 +46,14 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.recipeForm.value);
+    let rcp = new Recipe(null, null, null, null);
+    rcp.name = this.recipeForm.value.name;
+    rcp.description = this.recipeForm.value.description;
+    rcp.imagePath = this.recipeForm.value.imagePath;
+    rcp.ingredients = this.recipeForm.value.ingredients;
+
+    console.log(this.recipeForm);
+    this.recipeService.saveRecipe(this.id, rcp);
   }
 
 }

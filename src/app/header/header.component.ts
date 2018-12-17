@@ -21,12 +21,15 @@ export class HeaderComponent implements OnInit {
   }
 
   saveData() {
-    console.log('inside header save data')
     this.db.saveData()
       .subscribe(
-        (res: Response) => { console.log(res) }
+        (res: Response) => { console.log('saved data -> ' + res) }
       )
 
+  }
+
+  retrieveData() {
+    this.db.retriveData()
   }
 
 }
